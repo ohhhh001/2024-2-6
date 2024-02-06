@@ -1,0 +1,41 @@
+
+#include <iostream>
+
+using namespace std;
+int m;
+int fact(int n)
+{
+if(n==1)
+return 1;
+else
+  m= n*fact(n-1);
+return m;
+}
+
+int main()
+{
+	int m;
+	scanf("%d",&m);
+	fact(m);
+	printf("%d",fact(m));
+
+}
+延时函数：
+#include<iostream>
+#include <ctime>
+using namespace std;
+
+void sleep(int time)
+{
+	clock_t h = clock();
+	while (clock() - h <= time);
+}
+
+int main () {
+    cout << "无稚" << endl;
+    sleep(1000*2);//1000代表秒；
+    cout << "wuzhi" << endl;
+    return 0;
+}
+
+
